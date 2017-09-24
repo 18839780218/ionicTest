@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        #box{
+            width:100px;
+            height:3000px;
+        }
+
+    </style>
+
+</head>
+<body>
+        <div id="box"></div>
+</body>
+</html>
+<script src="jquery-3.2.1.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $(window).scroll(function() {
+            //$(document).scrollTop() 获取垂直滚动的距离
+            //$(document).scrollLeft() 这是获取水平滚动条的距离
+            if ($(document).scrollTop() <= 0) {
+                alert("滚动条已经到达顶部为0");
+            }
+            if ($(document).scrollTop() >= $(document).height() - $(window).height()) {
+                alert("滚动条已经到达底部为" + $(document).scrollTop());
+            }
+        });
+    });
+</script>
